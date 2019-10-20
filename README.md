@@ -7,7 +7,7 @@
 
 ## 变量
 
-在函数`void pointer()`中，有六个变量a、b、c、d、pa、pb，其中a和b为address-taken变量，其余四个为top-level变量。
+在函数`void pointer()`中，有六个变量`a`、`b`、`c`、`d`、`pa`、`pb`，其中`a`和`b`为address-taken变量，其余四个为top-level变量。
 
 ## 部分转换
 1. 使用指向a的指针pa对a的值进行修改
@@ -23,6 +23,8 @@
   %8 = load i32*, i32** %5, align 8
   store i32 %7, i32* %8, align 4
 ```
+
+其中，`%2`是之前存储`b`的变量，`%5`是之前存储`pa`的变量。语句执行过后，变量`a`（在ssa中对应`%1`）对应内存被改变。
 
 2. 使用指向b的指针pb对b进行修改
 
