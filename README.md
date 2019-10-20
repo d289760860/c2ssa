@@ -14,10 +14,15 @@
 
 在`c2ssa.c`中，语句
 ```
-*pa = b;
+  *pa = b;
 ```
 
 在`c2ssa.ll`，对应语句
 ```
-*pa = b;
+  %7 = load i32, i32* %2, align 4
+  %8 = load i32*, i32** %5, align 8
+  store i32 %7, i32* %8, align 4
 ```
+
+2. 使用指向b的指针pb对b进行修改
+
