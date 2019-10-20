@@ -7,6 +7,6 @@
 
 ## 变量
 
-在函数'void pointer()'中，有六个变量a、b、c、d、pa、pb，其中a和b为address-taken变量，其余四个为top-level变量。
+在函数`void pointer()`中，有六个变量a、b、c、d、pa、pb，其中a和b为address-taken变量，其余四个为top-level变量。
 
 ## 部分转换
